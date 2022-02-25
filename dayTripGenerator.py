@@ -4,8 +4,8 @@ import random
 
 destination = ['Washington D.C.', 'Richmond, VA', 'Virginia Beach, VA', 'Raleigh, NC']
 restaurant = ['The Reserve', 'Bell Greek', 'Riptides', 'Brocks BBQ']
-mode_of_transportation = ['Car', 'Train', 'Bus', 'Hitch hike']
-entertainment = ['a movie', 'an escape room', 'visit a museum', 'take a cave tour']
+mode_of_transportation = ['Car', 'Train', 'Bus', 'Hitch hiking']
+entertainment = ['watching a movie', 'doing an escape room', 'visiting a museum', 'takting a cave tour']
 
 
            
@@ -78,3 +78,11 @@ print(f'''Here are the details of your day trip:
         ''')
 
 
+confirm_trip = input('Would you like to confirm this trip? Enter y/n: ')
+def trip_confirmed():
+    if confirm_trip == 'y':
+        print(f'Excellent! Time to prepare for your trip. You will be arriving in {random_destination} via {random_transportation}, where you will spend the day {random_entertainment}. You will end your day having an amazing dinner at {random_restaurant}.')
+    else: 
+        print("No problem. This trip has been cancelled.")
+
+trip_confirmed()
