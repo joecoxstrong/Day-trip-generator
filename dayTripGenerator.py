@@ -95,13 +95,7 @@ def main():
             main()    
         else:
             print('Please enter "keep", "cancel", or "start over"')
-          
-              
-        
-               
-        
-        
-        
+            return trip_confirmed()     
 
     trip_confirmed()
 
