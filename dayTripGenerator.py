@@ -8,29 +8,18 @@ mode_of_transportation = ['Car', 'Train', 'Bus', 'Hitch hike']
 entertainment = ['a movie', 'an escape room', 'visit a museum', 'take a cave tour']
 
 
+           
+
 def generate_destination():
     random_destination = random.choice(destination)
     user_approval = input('We have selected ' +random_destination+ ' for your destination! Does this sound good? Enter y/n: ')
-    while user_approval == 'n':
-        print('Ok, let us select a new destination.')
-        generate_destination()
-    else:
-        print("Excelent choice. Now let's select your mode of transportation.")
+    if user_approval == 'y':
         return random_destination
+        print("Excelent choice. Now let's select your mode of transportation.")
         
-    
-           
-
-# def generate_destination():
-#     random_destination = random.choice(destination)
-#     user_approval = input('We have selected ' +random_destination+ ' for your destination! Does this sound good? Enter y/n: ')
-#     if user_approval == 'y':
-#         return random_destination
-#         print("Excelent choice. Now let's select your mode of transportation.")
-        
-#     else:
-#         print('Ok, let us select a new destination.')
-#         generate_destination()
+    else:
+        print('Ok, let us select a new destination.')
+    return generate_destination()
                 
 
 def generate_restaurant():
@@ -43,7 +32,7 @@ def generate_restaurant():
         
     else:
         print('Ok, let us select a new restaurant.')
-        generate_restaurant()
+    return generate_restaurant()
 
 def generate_transportation():
     random_transportation = random.choice(mode_of_transportation)
@@ -55,7 +44,7 @@ def generate_transportation():
         
     else:
         print('Ok, let us select a new mode of transportation.')
-        generate_transportation()
+    return generate_transportation()
 
 def generate_entertainment():
     random_entertainment = random.choice(entertainment)
@@ -67,7 +56,7 @@ def generate_entertainment():
         
     else:
         print('Ok, let us select a new activity.')
-        generate_entertainment()
+    return generate_entertainment()
     
         
     
